@@ -1,8 +1,8 @@
 # `.tbook` File Format Specification — version 2
 
 **Format version:** 2
-**Status:** Candidate (ratified 2026-09-26, second round 2026-09-28)
-**Last updated:** 2026-09-28
+**Status:** Final (released 2026-09-29)
+**Last updated:** 2026-09-29
 **Media type:** `application/vnd.tbook+zip`
 **File extension:** `.tbook`
 **License:** [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
@@ -11,14 +11,13 @@
 document; a version-2 file is not readable by a version-1 consumer and vice versa
 ([§10](#10-versioning-and-compatibility)).
 
-> **Release status.** Candidate. The author ratified every open choice of the
-> draft on 2026-09-26 ([Ratified decisions](#ratified-decisions-2026-09-26)) and
-> a second round of implementation questions on 2026-09-28
+> **Release status.** Final, released 2026-09-29; version 2 is the current
+> format. The author ratified every open choice of the draft on 2026-09-26
+> ([Ratified decisions](#ratified-decisions-2026-09-26)) and a second round of
+> implementation questions on 2026-09-28
 > ([Ratified decisions (2026-09-28)](#ratified-decisions-2026-09-28)).
 > The reference converter writes version 2 by default (`--format v1` remains
-> available); v2-capable readers open both versions. The status becomes Final
-> after v2-capable Android and desktop releases ship; the copy of this
-> specification on the website is published only then.
+> available); v2-capable readers open both versions.
 
 > **Background.** This document specifies the direction adopted by the 2026-09
 > format review (panel report §5.1: the `v2-json` container and link model, the
@@ -1398,14 +1397,13 @@ records whether one ran (`gates`).
 
 ## 12. Reference implementations
 
-The reference converter writes version 2 by default since 2026-09-26; no
-version-2 reader has been released yet. Mapping: producer and validator in `tbook_converter` (`internal/tbook`,
+The reference converter writes version 2 by default since 2026-09-26. Mapping: producer and validator in `tbook_converter` (`internal/tbook`,
 `internal/segment` for `tbook-w2`, `internal/align` for links, `x` and the
 digest; `cmd/tbook-migrate`, `cmd/tbook-validate`); consumers in
 `tbook_desktop` (`src-tauri/src/{models,tbook}.rs`,
 `src/lib/{render,align,tokenize}.ts`) and `TReader` (`data/model`, `data/book`,
-`ui/reader`). The Final document will map every section to its file, as
-version 1 §11 does.
+`ui/reader`). A per-section file mapping, as in version 1 §11, is not
+yet provided.
 
 ---
 

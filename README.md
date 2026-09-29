@@ -5,8 +5,8 @@ tap any word to see the full sentence translation with the matching words highli
 
 ## Specs
 
-- [Version 2](specs/tbook-format-v2.md) — Candidate
-- [Version 1](specs/tbook-format.md) — frozen
+- [Version 2](specs/tbook-format-v2.md) — current (Final)
+- [Version 1](specs/tbook-format.md) — previous, frozen; still supported by readers
 
 ## Links
 
