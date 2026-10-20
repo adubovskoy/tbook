@@ -2,7 +2,7 @@
 
 **Format version:** 2
 **Status:** Final (released 2026-09-29)
-**Last updated:** 2026-09-29
+**Last updated:** 2026-10-20
 **Media type:** `application/vnd.tbook+zip`
 **File extension:** `.tbook`
 **License:** [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
@@ -1460,7 +1460,9 @@ For each v1 chunk `{t:[a,b], w}` of translation `text`:
    (they highlighted nothing in v1).
 4. **Digit pass-through:** a still-`null` token that is a digit-only string
    identical to a source word of the sentence is linked to that word (S4 `4` →
-   «4»; 530 links in the sample).
+   «4»; 530 links in the sample), unless an `x` chunk overlaps the token —
+   linking it would break [§6.5](#65-x--escape-chunks) (a footnote marker in
+   «проектирования».10», a numeric id inside an untranslated URL).
 
 Every v1 word lies in exactly one `tbook-w2` token (0 failures in 995,021
 taps), so step 1 never fails. Step 3 fires for 0.02 % (English-source books) to
